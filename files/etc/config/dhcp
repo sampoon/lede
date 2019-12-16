@@ -1,0 +1,109 @@
+
+config dnsmasq
+	option domainneeded '1'
+	option localise_queries '1'
+	option rebind_protection '1'
+	option rebind_localhost '1'
+	option local '/lan/'
+	option domain 'lan'
+	option expandhosts '1'
+	option authoritative '1'
+	option readethers '1'
+	option leasefile '/tmp/dhcp.leases'
+	option nonwildcard '1'
+	option localservice '1'
+	option cachesize '10000'
+	option noresolv '1'
+	list server '127.0.0.1#7888'
+	list server '127.0.0.0#7888'
+
+config dhcp 'lan'
+	option interface 'lan'
+	option start '100'
+	option limit '150'
+	option leasetime '12h'
+
+config dhcp 'wan'
+	option interface 'wan'
+	option ignore '1'
+
+config domain
+	option name 'nas'
+	option ip '192.168.1.3'
+
+config domain
+	option name 'phicomm'
+	option ip '192.168.1.16'
+
+config domain
+	option name 'Mibox'
+	option ip '192.168.1.13'
+
+config domain
+	option ip '192.168.1.5'
+	option name 'richerAP'
+
+config domain
+	option name 'TPstudy'
+	option ip '192.168.1.17'
+
+config domain
+	option name 'camera'
+	option ip '192.168.1.225'
+
+config domain
+	option ip '192.168.1.208'
+	option name 'TPliving'
+
+config domain
+	option name 'xiaogurobot'
+	option ip '192.168.1.165'
+
+config domain
+	option name 'SonyBD'
+	option ip '192.168.1.166'
+
+config domain
+	option name 'asusrouter'
+	option ip '192.168.1.2'
+
+config domain
+	option name 'corridorAP'
+	option ip '192.168.1.9'
+
+config domain
+	option name 'masterAP'
+	option ip '192.168.1.10'
+
+config domain
+	option name 'parentAP'
+	option ip '192.168.1.6'
+
+config domain
+	option name 'familyPC'
+	option ip '192.168.1.8'
+
+config domain
+	option name 'proscenic'
+	option ip '192.168.1.116'
+
+config domain
+	option name 'GTking'
+	option ip '192.168.1.126'
+
+config domain
+	option name 'vaioLAN'
+	option ip '192.168.1.124'
+
+config domain
+	option name 'AsusLivingRoom'
+	option ip '192.168.1.238'
+
+config domain
+	option name 'TPkitchen'
+	option ip '192.168.1.152'
+
+config domain
+	option name 'CIHheater'
+	option ip '192.168.1.212'
+

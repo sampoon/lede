@@ -1,0 +1,29 @@
+# This file is interpreted as shell script.
+# Put your custom iptables rules here, they will
+# be executed with each firewall (re-)start.
+
+iptables -I INPUT -m mac --mac-source 48:13:F3:01:01:DD -j DROP
+	
+iptables -I INPUT -m mac --mac-source 00:0E:04:B7:6E:9F -j DROP
+
+iptables -I INPUT -m mac --mac-source 00:18:FE:2E:D7:D3 -j DROP
+
+iptables -I INPUT -m mac --mac-source 00:18:FE:2E:D7:D1 -j DROP
+
+iptables -I INPUT -m mac --mac-source 3C:2E:FF:90:75:86 -j DROP
+
+iptables -I FORWARD -m mac --mac-source 48:13:F3:01:01:DD -j DROP
+
+iptables -I FORWARD -m mac --mac-source 00:0E:04:B7:6E:9F -j DROP
+
+iptables -I FORWARD -m mac --mac-source 00:18:FE:2E:D7:D3 -j DROP
+
+iptables -I FORWARD -m mac --mac-source 00:18:FE:2E:D7:D1 -j DROP
+
+iptables -I FORWARD -m mac --mac-source 3C:2E:FF:90:75:86 -j DROP
+
+# Internal uci firewall chains are flushed and recreated on reload, so
+# put custom rules into the root chains e.g. INPUT or FORWARD or into the
+# special user chains, e.g. input_wan_rule or postrouting_lan_rule.
+iptables -t nat -A PREROUTING -p udp --dport 53 -j REDIRECT --to-ports 53
+iptables -t nat -A PREROUTING -p tcp --dport 53 -j REDIRECT --to-ports 53
