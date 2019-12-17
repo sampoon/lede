@@ -12,9 +12,9 @@ name: 2019.12.17固件
 on:
   schedule:
     - cron: 0 20 * * *
-  push:
-    branches: 
-      - master
+ #  push:
+ #    branches: 
+ #      - master
 
 jobs:
   build:
@@ -153,7 +153,6 @@ jobs:
           cat >> .config <<EOF
           CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Kcptun=y
           CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks=y
-          CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Server=y
           CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Socks=y
           CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray=y
           CONFIG_PACKAGE_luci-app-ttyd=y
@@ -167,7 +166,10 @@ jobs:
           # CONFIG_PACKAGE_luci-app-nlbwmon is not set
           # CONFIG_PACKAGE_luci-app-vlmcsd is not set
           # CONFIG_PACKAGE_luci-app-wol is not set
+          # CONFIG_PACKAGE_luci-app-xlnetacc is not set
           # CONFIG_PACKAGE_luci-app-zerotier is not set
+          # CONFIG_PACKAGE_luci-app-p p t p-server is not set
+          # CONFIG_PACKAGE_luci-app-ipsec-virtual**d is not set
           EOF
 
 
