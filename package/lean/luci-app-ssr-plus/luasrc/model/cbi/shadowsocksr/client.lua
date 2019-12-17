@@ -70,6 +70,11 @@ o:value("0", translate("Use Local DNS Service listen port 5335"))
 o.default = 1
 
 o = s:option(ListValue, "tunnel_forward", translate("Anti-pollution DNS Server"))
+o:value("127.0.0.1:7666", translate("LOOP DNS (127.0.0.1:7666)"))
+o:value("192.168.1.1:53", translate("SYSTEM DNS (192.168.1.1)"))
+o:value("205.252.144.228:53", translate("HKa DNS (205.252.144.228)"))
+o:value("202.181.224.2:53", translate("HKb DNS (202.181.224.2)"))
+o:value("168.95.192.1:53", translate("TWa DNS (168.95.192.1)"))
 o:value("8.8.4.4:53", translate("Google Public DNS (8.8.4.4)"))
 o:value("8.8.8.8:53", translate("Google Public DNS (8.8.8.8)"))
 o:value("208.67.222.222:53", translate("OpenDNS (208.67.222.222)"))
