@@ -7,14 +7,14 @@
 # <https://github.com/KFERMercer/OpenWrt-CI>
 # 
 
-name: OpenWrt-CI
+name: 2019.12.17固件
 
 on:
   schedule:
     - cron: 0 20 * * *
-  # push:
-  #   branches: 
-  #     - master
+  push:
+    branches: 
+      - master
 
 jobs:
   build:
@@ -159,6 +159,15 @@ jobs:
           CONFIG_PACKAGE_luci-app-ttyd=y
           CONFIG_PACKAGE_luci-app-koolproxyR=y
           CONFIG_PACKAGE_luci-app-adguardhome=y
+          # CONFIG_PACKAGE_luci-app-accesscontrol is not set
+          # CONFIG_PACKAGE_luci-app-adbyby-plus is not set
+          # CONFIG_PACKAGE_luci-app-autoreboot is not set
+          # CONFIG_PACKAGE_luci-app-ddns is not set
+          # CONFIG_PACKAGE_luci-app-frpc is not set
+          # CONFIG_PACKAGE_luci-app-nlbwmon is not set
+          # CONFIG_PACKAGE_luci-app-vlmcsd is not set
+          # CONFIG_PACKAGE_luci-app-wol is not set
+          # CONFIG_PACKAGE_luci-app-zerotier is not set
           EOF
 
 
