@@ -168,8 +168,11 @@ jobs:
           # CONFIG_PACKAGE_luci-app-wol is not set
           # CONFIG_PACKAGE_luci-app-xlnetacc is not set
           # CONFIG_PACKAGE_luci-app-zerotier is not set
-          # CONFIG_PACKAGE_luci-app-p p t p-server is not set
-          # CONFIG_PACKAGE_luci-app-ipsec-virtual**d is not set
+          # CONFIG_PACKAGE_luci-app-pptp-server is not set
+          # CONFIG_PACKAGE_luci-app-ipsec-vpnd is not set
+          # CONFIG_PACKAGE_luci-app-vsftpd is not set
+          # CONFIG_PACKAGE_luci-app-v2ray-server is not set
+          # CONFIG_PACKAGE_luci-app-qbittorrent is not set
           EOF
 
 
