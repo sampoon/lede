@@ -13,9 +13,7 @@ config dnsmasq
 	option nonwildcard '1'
 	option localservice '1'
 	option cachesize '10000'
-	option noresolv '1'
-	list server '127.0.0.1#7888'
-	list server '127.0.0.0#7888'
+	option resolvfile '/tmp/resolv.conf.auto'
 
 config dhcp 'lan'
 	option interface 'lan'
