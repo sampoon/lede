@@ -7,7 +7,7 @@
 # <https://github.com/KFERMercer/OpenWrt-CI>
 # 
 
-name: 2019.12.17固件
+name: 2020.01.27固件
 
 on:
   schedule:
